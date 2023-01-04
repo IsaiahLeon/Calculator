@@ -1,0 +1,61 @@
+import java.util.Scanner;
+public class calc {
+
+	public static void main(String[] args) {
+		
+		int number1, number2;
+		
+		Scanner nums = new Scanner(System.in);
+		
+		System.out.println("Please enter your desired numbers: ");
+		
+		number1 = nums.nextInt();
+		number2 = nums.nextInt();
+		
+		System.out.println("Please enter your desired operator (+ , - , * , /): ");
+		
+		char operator = nums.next().charAt(0);
+		
+		int op = 0;
+		
+		switch (operator) {
+		
+		case '+':
+			
+			op = number1 + number2;
+			
+			break;
+			
+		case '-':
+			
+			op = number1 - number2;
+			
+			break;
+			
+		case '*':
+			
+			op = number1 * number2;
+			
+			break;
+			
+		case '/':
+			
+			op = number1 / number2;
+			
+			break;
+			
+		default:
+			
+			System.out.println("Error: unidentified operation");
+			
+			break;
+		
+		}
+		
+		System.out.println("The result is: " + op);
+		
+		
+
+	}
+
+}
